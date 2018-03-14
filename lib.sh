@@ -692,7 +692,7 @@ fetch_metadata() {
 
 	local isbn_source="" args=()
 	for isbn_source in "${isbn_sources[@]:-}"; do
-		args+=("${isbn_source:+--allowed-plugin=$isbn_source}")
+		args+=("${isbn_source:+}")
 	done
 
 	decho "Calling fetch-ebook-metadata --verbose" "${args[*]}" "${@:3}"
